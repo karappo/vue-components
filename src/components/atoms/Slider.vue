@@ -175,7 +175,7 @@ export default Vue.extend({
     const slides = this.$el.querySelectorAll('.slide')
     this.slideCount = slides.length
 
-    // this.timer = setInterval(this.switchSlide, this.duration)
+    this.timer = setInterval(this.switchSlide, this.duration)
   },
   beforeDestroy: function() {
     clearInterval(this.timer)

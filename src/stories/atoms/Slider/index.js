@@ -2,6 +2,10 @@
 
 import readme from './README.md';
 import Slider from '../../../components/atoms/Slider.vue';
+import img1 from '../../../assets/img/1.jpg';
+import img2 from '../../../assets/img/2.jpg';
+import img3 from '../../../assets/img/3.jpg';
+
 
 const component = () => {
   return {
@@ -10,14 +14,13 @@ const component = () => {
     template: `
       <Slider
         :images="[
-          'https://personal-bio.netlify.com/personal-bio/img/index/slides/day1/1@2x-e413bf6a.jpg',
-          'https://personal-bio.netlify.com/personal-bio/img/index/slides/day1/3@2x-cb561e64.jpg',
-          'https://personal-bio.netlify.com/personal-bio/img/index/slides/day1/5@2x-ef96f619.jpg',
-          'https://personal-bio.netlify.com/personal-bio/img/index/slides/day1/7@2x-9ee7506f.jpg'
+          '${img1}',
+          '${img2}',
+          '${img3}'
         ]"
-        width='523px'
-        height='698px'
-        offset='101px'
+        width='600px'
+        height='400px'
+        offset='100px'
       />
     `
   }
