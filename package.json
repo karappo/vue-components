@@ -1,0 +1,85 @@
+{
+  "name": "vue-components",
+  "version": "0.1.0",
+  "description": "Vue components project by Karappo Inc.",
+  "author": "Naokazu Terada",
+  "private": true,
+  "scripts": {
+    "setup": "git submodule update --init && yarn",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build:storybook": "vue-cli-service storybook:build && node ./build-scripts/fix-static-storybook.js",
+    "serve:storybook": "vue-cli-service storybook:serve -p 6006"
+  },
+  "dependencies": {
+    "object-inspect": "^1.6.0",
+    "vue": "^2.6.10",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-options": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/vue": "^5.1.9",
+    "@vue/cli-plugin-babel": "^3.9.2",
+    "@vue/cli-plugin-eslint": "^3.9.2",
+    "@vue/cli-service": "^3.9.2",
+    "ajv": "^6.10.2",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.1",
+    "storybook-addon-vue-info": "^1.2.1",
+    "storybook-readme": "^5.0.5",
+    "vue-cli-plugin-storybook": "^0.6.1",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.35.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "webextensions": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "globals": {
+      "ga": false
+    },
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

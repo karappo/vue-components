@@ -1,0 +1,3 @@
+[submodule "src/lib/general"]
+	path = src/lib/general
+	url = git://github.com/naokazuterada/general.git
