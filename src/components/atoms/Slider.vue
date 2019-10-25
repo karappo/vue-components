@@ -143,7 +143,7 @@ export default Vue.extend({
     // 画像の幅（高さ） - 表示領域の幅（高さ） （正の値）
     offset: {
       type: String,
-      default: '10px'
+      default: '50px'
     }
   },
   data: function() {
