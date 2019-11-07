@@ -26,5 +26,4 @@ const component = () => {
   }
 }
 
-export default [readme,
-   component];
+export default [readme, component];
