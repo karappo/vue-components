@@ -4,7 +4,11 @@ import { withReadme } from 'storybook-readme';
 
 import Slider from './Slider/';
 import SliderDirection from './Slider/direction';
+import ScrollGuide from './ScrollGuide/';
 
 storiesOf('Atoms/Slider', module)
   .add('Basic', withReadme(...Slider))
   .add('Direction', withReadme(...SliderDirection))
+
+storiesOf('Atoms/ScrollGuide', module)
+  .add('Basic', withReadme(...ScrollGuide))
