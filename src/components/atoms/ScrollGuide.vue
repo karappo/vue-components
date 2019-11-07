@@ -6,14 +6,14 @@
 
 <style lang="sass" scoped>
 @keyframes scroll
-	0%
-		transform: translate3d(0, -100%, 0)
-	15%
-		transform: translate3d(0, -98%, 0)
-	85%
-		transform: translate3d(0, 98%, 0)
-	100%
-		transform: translate3d(0, 100%, 0)
+  0%
+    transform: translate3d(0, -100%, 0)
+  15%
+    transform: translate3d(0, -98%, 0)
+  85%
+    transform: translate3d(0, 98%, 0)
+  100%
+    transform: translate3d(0, 100%, 0)
 
 .scroll
   display: flex
