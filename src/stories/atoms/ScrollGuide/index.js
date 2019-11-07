@@ -8,8 +8,14 @@ const component = () => {
   return {
     components: { ScrollGuide },
     template: `
-      <ScrollGuide/>
-    `
+      <div>
+        <ScrollGuide/>
+        <br>
+        <ScrollGuide color="#cccccc"/>
+        <br>
+        <ScrollGuide color="#1EA7FD"/>
+      </div>
+      `
   }
 }
 
