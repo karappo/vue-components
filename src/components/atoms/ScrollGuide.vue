@@ -51,7 +51,7 @@ export default Vue.extend({
   props: {
     color: {
       type: String,
-      default: '#ffffff'
+      default: '#000000'
     }
   },
   computed: {
