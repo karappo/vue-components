@@ -12,5 +12,5 @@ storiesOf('Atoms/Slider', module)
   .add('Direction', withReadme(...SliderDirection))
 
 storiesOf('Atoms/ScrollGuide', module)
-  .addParameters({ options: { theme: themes.dark } })
+  // .addParameters({ options: { theme: themes.dark } })
   .add('Basic', withReadme(...ScrollGuide))
