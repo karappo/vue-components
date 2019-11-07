@@ -20,7 +20,6 @@
   justify-content: center
   align-items: center
   flex-direction: column
-  z-index: 10
   span
     font-size: 12px
     letter-spacing: 0.05em
