@@ -6,6 +6,7 @@ import { themes } from '@storybook/theming';
 import Slider from './Slider/';
 import SliderDirection from './Slider/direction';
 import ScrollGuide from './ScrollGuide/';
+import ScrollGuideColor from './ScrollGuide/color';
 
 storiesOf('Atoms/Slider', module)
   .add('Basic', withReadme(...Slider))
@@ -14,3 +15,4 @@ storiesOf('Atoms/Slider', module)
 storiesOf('Atoms/ScrollGuide', module)
   // .addParameters({ options: { theme: themes.dark } })
   .add('Basic', withReadme(...ScrollGuide))
+  .add('Color', withReadme(...ScrollGuideColor))

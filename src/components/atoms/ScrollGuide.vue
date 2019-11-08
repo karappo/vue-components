@@ -20,6 +20,10 @@
   justify-content: center
   align-items: center
   flex-direction: column
+  position: absolute
+  width: 60px
+  bottom: 0
+  left: calc(50% - 30px)
   span
     font-size: 12px
     letter-spacing: 0.05em
