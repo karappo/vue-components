@@ -8,7 +8,7 @@ const component = () => {
   return {
     components: { ScrollGuide },
     template: `
-      <div style="position: relative; width: 100%; height: calc(100vh - 16px); border: 1px solid #eee;">
+      <div style="position: relative; width: 100%; height: calc(100vh - 18px); border: 1px solid #eee;">
         <ScrollGuide/>
       </div>
       `
