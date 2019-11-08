@@ -23,13 +23,13 @@
   span
     font-size: 12px
     letter-spacing: 0.05em
-    color: var(--color)
+    color: var(--text-color)
   i
     display: block
     width: 2px
     height: 47px
     margin-top: 18px
-    background-color: rgba(var(--color-hex), .4)
+    background-color: var(--gutter-color)
     overflow: hidden
     position: relative
     &:before
@@ -37,7 +37,7 @@
       content: ''
       width: 100%
       height: 100%
-      background-color: rgba(var(--color-hex), .8)
+      background-color: var(--highlight-color)
       position: absolute
       top: 0
       left: 0
@@ -49,7 +49,15 @@ import Vue from 'vue'
 
 export default Vue.extend({
   props: {
-    color: {
+    gutterColor: {
+      type: String,
+      default: 'rgba(0, 0, 0, 0.1)'
+    },
+    highlightColor: {
+      type: String,
+      default: 'black'
+    },
+    textColor: {
       type: String,
       default: '#000000'
     }
@@ -57,15 +65,10 @@ export default Vue.extend({
   computed: {
     styles () {
       return {
-        '--color': this.color,
-        '--color-hex': this.hexToRgb(this.color)
+        '--gutter-color': this.gutterColor,
+        '--highlight-color': this.highlightColor,
+        '--text-color': this.textColor
       }
-    }
-  },
-  methods: {
-    hexToRgb: (hex) => {
-      var res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-      return res ? `${parseInt(res[1], 16)}, ${parseInt(res[2], 16)}, ${parseInt(res[3], 16)}` : null;
     }
   }
 })

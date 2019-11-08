@@ -11,9 +11,9 @@ const component = () => {
       <div>
         <ScrollGuide/>
         <br>
-        <ScrollGuide color="#cccccc"/>
+        <ScrollGuide gutterColor="rgba(0,0,0,0.1)" highlightColor="#333" textColor="rgba(0,0,0,0.1)"/>
         <br>
-        <ScrollGuide color="#1EA7FD"/>
+        <ScrollGuide gutterColor="#CCC" highlightColor="#1EA7FD" textColor="#1EA7FD"/>
       </div>
       `
   }
