@@ -1,6 +1,6 @@
 <template lang="pug">
 .slides(:data-direction="direction" :data-orientation="orientation" :style="slidesStyle()")
-  .slide(v-for="(item, index) in images" :class="{ active: activeIndex === index, exActive: exActiveIndex() === index, moving: activeIndex === index || exActiveIndex() === index}")
+  .slide(v-for="(item, index) in images" :class="{ active: activeIndex === index, exActive: exActiveIndex === index, moving: activeIndex === index || exActiveIndex === index}")
     .image(:style="imageStyle(item, index)")
 </template>
 
@@ -171,6 +171,14 @@ export default Vue.extend({
   computed: {
     slideCount: function () {
       return this.images.length
+    },
+    // DOM順序を変えずにz-indexで表示を切り替えるため、一つ前の画像のz-indexも必要
+    exActiveIndex: function () {
+      if (this.activeIndex === 0) {
+        return this.slideCount - 1
+      } else {
+        return this.activeIndex - 1
+      }
     }
   },
   mounted: function () {
@@ -186,7 +194,6 @@ export default Vue.extend({
       }
       img.src = item
     })
-
     this.timer = setInterval(this.switchSlide, this.duration)
   },
   beforeDestroy: function () {
@@ -230,18 +237,10 @@ export default Vue.extend({
       }
     },
     switchSlide () {
-      this.activeIndex++;
-      if (this.slideCount <= this.activeIndex) {
+      if (this.slideCount - 1 <= this.activeIndex) {
         this.activeIndex = 0
-      }
-    },
-    // DOM順序を変えずにz-indexで表示を切り替えるため、一つ前の画像のz-indexも必要
-    exActiveIndex () {
-      if (this.activeIndex == 0) {
-        return this.slideCount - 1
-      }
-      else {
-        return this.activeIndex - 1
+      } else {
+        this.activeIndex++
       }
     },
     getOrientation (width, height) {
