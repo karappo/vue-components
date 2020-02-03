@@ -1,7 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { configure, addDecorator, addParameters } from '@storybook/vue';
-import { withOptions } from '@storybook/addon-options';
-import { configureViewport } from '@storybook/addon-viewport';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { create } from '@storybook/theming';
