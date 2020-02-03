@@ -130,7 +130,7 @@ export default Vue.extend({
       default: 'up',
       validator: (v) => { return ['up', 'down', 'left', 'right'].includes(v) }
     },
-    // 表示領域のサイズ（単位：px | % ）
+    // 表示領域のサイズ
     width: {
       type: String,
       default: '400px',
@@ -147,7 +147,7 @@ export default Vue.extend({
         return true
       }
     },
-    // 画像の幅（高さ） - 表示領域の幅（高さ） （正の値）
+    // 画像の幅（高さ）- 表示領域の幅（高さ）
     offset: {
       type: String,
       default: '50px',
