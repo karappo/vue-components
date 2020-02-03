@@ -141,7 +141,7 @@ export default Vue.extend({
     },
     height: {
       type: String,
-      default: '400px',
+      default: '300px',
       validator: (value) => {
         if (!/[px|%]$/.test(value)) throw new Error('The prop "height" should be end with "px" or "%"')
         return true
