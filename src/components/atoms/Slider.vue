@@ -129,7 +129,7 @@ export default Vue.extend({
     direction: {
       type: String,
       default: 'up',
-      validator: (v)=> { return ['up', 'down', 'left', 'right'].includes(v) }
+      validator: (v) => { return ['up', 'down', 'left', 'right'].includes(v) }
     },
     // 表示領域のサイズ（単位：px | % ）
     width: {
@@ -161,9 +161,9 @@ export default Vue.extend({
   mounted: function () {
     window.addEventListener('resize', this.onWindowResize)
     this.onWindowResize()
-    this.images.forEach((item, index)=> {
+    this.images.forEach((item, index) => {
       let img = new Image();
-      img.onload = ()=> {
+      img.onload = () => {
         this.imageSizes[index] = {
           width: img.width,
           height: img.height

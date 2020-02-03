@@ -67,7 +67,7 @@ export default Vue.extend({
       default: () => { return [] }
     }
   },
-  data: function () {
+  data: () => {
     return {
       tooltipText: '',
       tooltipY: null,
@@ -76,7 +76,7 @@ export default Vue.extend({
   },
   mounted: function () {
     window.addEventListener('scroll', this.onScroll)
-    this.targets = this.links.map((item)=> { return item.target }).reverse()
+    this.targets = this.links.map((item) => { return item.target }).reverse()
   },
   methods: {
     showTooltip (e) {
@@ -87,7 +87,7 @@ export default Vue.extend({
       this.tooltipY = null
     },
     onScroll () {
-      this.$el.querySelectorAll('a').forEach((el)=> { el.classList.remove('current')})
+      this.$el.querySelectorAll('a').forEach((el) => { el.classList.remove('current')})
       // 後ろから順にチェックしていく
       for (const i in this.targets) {
         const target = document.querySelector(this.targets[i])
