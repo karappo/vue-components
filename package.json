@@ -79,7 +79,11 @@
         "before": true,
         "after": true
       }],
-      "quotes": ["error", "single"]
+      "quotes": ["error", "single"],
+      "comma-spacing": ["error", {
+        "before": false,
+        "after": true
+      }]
     },
     "parserOptions": {
       "parser": "babel-eslint"

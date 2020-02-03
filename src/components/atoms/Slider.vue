@@ -194,12 +194,12 @@ export default Vue.extend({
 
         // 縦方向のトランジッション
         if (['up', 'down'].includes(this.direction)) {
-          let calcWidth = img.width * ((this.$el.clientHeight + parseInt(this.offset,10)) / img.height)
+          let calcWidth = img.width * ((this.$el.clientHeight + parseInt(this.offset, 10)) / img.height)
           backgroundSize = calcWidth < this.$el.clientWidth ? '100% auto' : 'auto calc(100% + var(--offset))'
         }
         // 横方向のトランジッション
         else {
-          let calcHeight = img.height * ((this.$el.clientWidth + parseInt(this.offset,10)) / img.width)
+          let calcHeight = img.height * ((this.$el.clientWidth + parseInt(this.offset, 10)) / img.width)
           backgroundSize = calcHeight < this.$el.clientHeight ? 'auto 100%' : 'calc(100% + var(--offset)) auto'
         }
       }
@@ -234,7 +234,7 @@ export default Vue.extend({
     },
     getOrientation (width, height) {
       if (width && height) {
-        return (parseInt(width,10) < parseInt(height,10)) ? 'portrait' : 'landscape'
+        return (parseInt(width, 10) < parseInt(height, 10)) ? 'portrait' : 'landscape'
       }
     }
   }
