@@ -152,7 +152,8 @@ export default Vue.extend({
       type: String,
       default: '50px',
       validator: (value) => {
-        if (!/px$/.test(value)) throw new Error('The prop "width" should be end with "px"')
+        if (!/px$/.test(value)) throw new Error('The prop "offset" should be end with "px"')
+        if (parseInt(value, 10) < 0) throw new Error('The prop "offset" must be positive')
         return true
       }
     }
