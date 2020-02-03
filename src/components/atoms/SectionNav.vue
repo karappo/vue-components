@@ -64,7 +64,7 @@ export default Vue.extend({
   props: {
     links: {
       type: Array,
-      default: []
+      default: () => { reutrn [] }
     }
   },
   data: function() {
@@ -86,7 +86,7 @@ export default Vue.extend({
     hideTooltip() {
       this.tooltipY = null
     },
-    onScroll(e) {
+    onScroll() {
       this.$el.querySelectorAll('a').forEach((el)=> { el.classList.remove('current')})
       // 後ろから順にチェックしていく
       for(const i in this.targets) {
