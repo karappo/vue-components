@@ -70,22 +70,43 @@
       "ga": false
     },
     "rules": {
-      "keyword-spacing": [2, {
-        "before": true,
-        "after": true
-      }],
-      "space-before-function-paren": ["error", "always"],
-      "arrow-spacing": ["error", {
-        "before": true,
-        "after": true
-      }],
-      "quotes": ["error", "single"],
-      "comma-spacing": ["error", {
-        "before": false,
-        "after": true
-      }],
-      "quote-props": ["error", "as-needed"],
-      "object-curly-spacing": ["error", "always"],
+      "keyword-spacing": [
+        2,
+        {
+          "before": true,
+          "after": true
+        }
+      ],
+      "space-before-function-paren": [
+        "error",
+        "always"
+      ],
+      "arrow-spacing": [
+        "error",
+        {
+          "before": true,
+          "after": true
+        }
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "comma-spacing": [
+        "error",
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "quote-props": [
+        "error",
+        "as-needed"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
       "space-infix-ops": "error"
     },
     "parserOptions": {
