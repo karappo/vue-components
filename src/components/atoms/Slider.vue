@@ -1,7 +1,7 @@
 <template lang="pug">
 .slides(:data-direction="direction" :data-orientation="orientation" :style="slidesStyle()")
-  .slide(v-for="(item, index) in images" :class="slideClass(index)")
-    .image(:style="imageStyle(item, index)")
+  .slide(v-for="(item, index) in images" :class="slideClass(index)" :key="index")
+    .image(:style="{ backgroundImage: `url(${item})` }" :ref="`image-${index}`")
 </template>
 
 <style lang="sass" scoped>
@@ -183,8 +183,6 @@ export default Vue.extend({
     }
   },
   mounted: function () {
-    window.addEventListener('resize', this.onWindowResize)
-    this.onWindowResize()
     this.images.forEach((item, index) => {
       let img = new Image();
       img.onload = () => {
@@ -196,6 +194,8 @@ export default Vue.extend({
       img.src = item
     })
     this.timer = setInterval(this.switchSlide, this.duration)
+    window.addEventListener('resize', this.onWindowResize)
+    this.onWindowResize()
   },
   beforeDestroy: function () {
     clearInterval(this.timer)
@@ -205,28 +205,23 @@ export default Vue.extend({
       this.widthInPixels = `${this.$el.clientWidth}px`
       this.heightInPixels = `${this.$el.clientHeight}px`
       this.orientation = this.getOrientation(this.$el.clientWidth, this.$el.clientHeight)
+      this.setImageBackgroundSize()
     },
-    imageStyle (item, index) {
-      let backgroundSize = 'cover'
-      let img = this.imageSizes[index]
-      if (img) {
+    setImageBackgroundSize () {
+      this.images.forEach((item, index) => {
         // offset分も加味して、必要なだけ引き伸ばしたとすると必要な幅高さが得られるかを調べる
-
         // 縦方向のトランジッション
+        const el = this.$refs[`image-${index}`][0]
         if (['up', 'down'].includes(this.direction)) {
-          let calcWidth = img.width * ((this.$el.clientHeight + parseInt(this.offset, 10)) / img.height)
-          backgroundSize = calcWidth < this.$el.clientWidth ? '100% auto' : 'auto calc(100% + var(--offset))'
+          let calcWidth = item.width * ((this.$el.clientHeight + parseInt(this.offset, 10)) / item.height)
+          el.style.backgroundSize = calcWidth < this.$el.clientWidth ? '100% auto' : 'auto calc(100% + var(--offset))'
         }
         // 横方向のトランジッション
         else {
-          let calcHeight = img.height * ((this.$el.clientWidth + parseInt(this.offset, 10)) / img.width)
-          backgroundSize = calcHeight < this.$el.clientHeight ? 'auto 100%' : 'calc(100% + var(--offset)) auto'
+          let calcHeight = item.height * ((this.$el.clientWidth + parseInt(this.offset, 10)) / item.width)
+          el.style.backgroundSize = calcHeight < this.$el.clientHeight ? 'auto 100%' : 'calc(100% + var(--offset)) auto'
         }
-      }
-      return {
-        backgroundImage: `url(${item})`,
-        backgroundSize
-      }
+      })
     },
     slidesStyle () {
       return {
