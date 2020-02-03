@@ -1,6 +1,6 @@
 <template lang="pug">
 .slides(:data-direction="direction" :data-orientation="orientation" :style="slidesStyle()")
-  .slide(v-for="(item, index) in images" :class="{ active: activeIndex === index, oneBefore: oneBeforeIndex === index, moving: activeIndex === index || oneBeforeIndex === index}")
+  .slide(v-for="(item, index) in images" :class="slideClass(index)")
     .image(:style="imageStyle(item, index)")
 </template>
 
@@ -234,6 +234,13 @@ export default Vue.extend({
         '--height': this.height,
         '--width_px': this.widthInPixels,
         '--height_px': this.heightInPixels
+      }
+    },
+    slideClass (index) {
+      return {
+        active: this.activeIndex === index,
+        oneBefore: this.oneBeforeIndex === index,
+        moving: this.activeIndex === index || this.oneBeforeIndex === index
       }
     },
     switchSlide () {
