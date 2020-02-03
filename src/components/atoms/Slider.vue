@@ -135,7 +135,7 @@ export default Vue.extend({
       type: String,
       default: '400px',
       validator: (value) => {
-        if (!/[px|%]$/.test(value)) throw new Error('The prop "width" should be end with "px" or "%"')
+        if (!/[px|%|vw|vh]$/.test(value)) throw new Error('The prop "width" should be end with "px" or "%"')
         return true
       }
     },
@@ -143,7 +143,7 @@ export default Vue.extend({
       type: String,
       default: '300px',
       validator: (value) => {
-        if (!/[px|%]$/.test(value)) throw new Error('The prop "height" should be end with "px" or "%"')
+        if (!/[px|%|vw|vh]$/.test(value)) throw new Error('The prop "height" should be end with "px" or "%"')
         return true
       }
     },
