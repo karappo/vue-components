@@ -50,20 +50,44 @@
 
 <script>
 import Vue from 'vue'
-
+const hexToRgb = (hex) => {
+  const res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+  return res ? `rgb(${parseInt(res[1], 16)},${parseInt(res[2], 16)},${parseInt(res[3], 16)})` : null
+}
+const isValidColor = (color) => {
+  color = color.toLowerCase().replace(/\s/g, '') // Normalization
+  // Create test elements and assign styles
+  const s = document.createElement('div').style
+  s.color = color
+  const computed = s.color.replace(/\s/g, '') // Normalization
+  // First compare with "rgba()". If color is Hex, change to rgb and compare
+  return  computed == color || computed == hexToRgb(color)
+}
 export default Vue.extend({
   props: {
     gutterColor: {
       type: String,
-      default: 'rgba(0, 0, 0, 0.1)'
+      default: 'rgba(0, 0, 0, 0.1)',
+      validator: (value) => {
+        if (!isValidColor(value)) throw new Error('The prop "gutterColor" should be valid color')
+        return true
+      }
     },
     highlightColor: {
       type: String,
-      default: 'black'
+      default: 'black',
+      validator: (value) => {
+        if (!isValidColor(value)) throw new Error('The prop "highlightColor" should be valid color')
+        return true
+      }
     },
     textColor: {
       type: String,
-      default: '#000000'
+      default: '#000000',
+      validator: (value) => {
+        if (!isValidColor(value)) throw new Error('The prop "textColor" should be valid color')
+        return true
+      }
     }
   },
   computed: {
