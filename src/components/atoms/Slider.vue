@@ -109,7 +109,6 @@
   &[data-direction="right"]
     .slide.active
       animation-name: appear_horizontal
-
 </style>
 
 <script>
@@ -134,16 +133,28 @@ export default Vue.extend({
     // 表示領域のサイズ（単位：px | % ）
     width: {
       type: String,
-      default: '400px'
+      default: '400px',
+      validator: (value) => {
+        if (!/[px|%]$/.test(value)) throw new Error('The prop "width" should be end with "px" or "%"')
+        return true
+      }
     },
     height: {
       type: String,
-      default: '400px'
+      default: '400px',
+      validator: (value) => {
+        if (!/[px|%]$/.test(value)) throw new Error('The prop "height" should be end with "px" or "%"')
+        return true
+      }
     },
     // 画像の幅（高さ） - 表示領域の幅（高さ） （正の値）
     offset: {
       type: String,
-      default: '50px'
+      default: '50px',
+      validator: (value) => {
+        if (!/px$/.test(value)) throw new Error('The prop "width" should be end with "px"')
+        return true
+      }
     }
   },
   data: function () {
