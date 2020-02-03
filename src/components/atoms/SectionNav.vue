@@ -67,26 +67,26 @@ export default Vue.extend({
       default: () => { return [] }
     }
   },
-  data: function() {
+  data: function () {
     return {
       tooltipText: '',
       tooltipY: null,
       targets: [] // リンク先の一覧
     }
   },
-  mounted: function() {
+  mounted: function () {
     window.addEventListener('scroll', this.onScroll)
     this.targets = this.links.map((item)=> { return item.target }).reverse()
   },
   methods: {
-    showTooltip(e) {
+    showTooltip (e) {
       this.tooltipText = e.target.dataset.tooltip
       this.tooltipY = `${e.target.getBoundingClientRect().top - 10}px`
     },
-    hideTooltip() {
+    hideTooltip () {
       this.tooltipY = null
     },
-    onScroll() {
+    onScroll () {
       this.$el.querySelectorAll('a').forEach((el)=> { el.classList.remove('current')})
       // 後ろから順にチェックしていく
       for (const i in this.targets) {

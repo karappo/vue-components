@@ -146,7 +146,7 @@ export default Vue.extend({
       default: '50px'
     }
   },
-  data: function() {
+  data: function () {
     return {
       activeIndex: 0,
       slideCount: 0,
@@ -158,7 +158,7 @@ export default Vue.extend({
       imageSizesCompleted: false
     }
   },
-  mounted: function() {
+  mounted: function () {
     window.addEventListener('resize', this.onWindowResize)
     this.onWindowResize()
     this.images.forEach((item, index)=> {
@@ -177,16 +177,16 @@ export default Vue.extend({
 
     this.timer = setInterval(this.switchSlide, this.duration)
   },
-  beforeDestroy: function() {
+  beforeDestroy: function () {
     clearInterval(this.timer)
   },
   methods: {
-    onWindowResize() {
+    onWindowResize () {
       this.widthInPixels = `${this.$el.clientWidth}px`
       this.heightInPixels = `${this.$el.clientHeight}px`
       this.orientation = this.getOrientation(this.$el.clientWidth, this.$el.clientHeight)
     },
-    imageStyle(item, index) {
+    imageStyle (item, index) {
       let backgroundSize = 'cover'
       let img = this.imageSizes[index]
       if (img) {
@@ -208,7 +208,7 @@ export default Vue.extend({
         backgroundSize
       }
     },
-    slidesStyle() {
+    slidesStyle () {
       return {
         '--offset': this.offset,
         '--width': this.width,
@@ -217,14 +217,14 @@ export default Vue.extend({
         '--height_px': this.heightInPixels
       }
     },
-    switchSlide() {
+    switchSlide () {
       this.activeIndex++;
       if (this.slideCount <= this.activeIndex) {
         this.activeIndex = 0
       }
     },
     // DOM順序を変えずにz-indexで表示を切り替えるため、一つ前の画像のz-indexも必要
-    exActiveIndex() {
+    exActiveIndex () {
       if (this.activeIndex == 0) {
         return this.slideCount - 1
       }
@@ -232,7 +232,7 @@ export default Vue.extend({
         return this.activeIndex - 1
       }
     },
-    getOrientation(width, height) {
+    getOrientation (width, height) {
       if (width && height) {
         return (parseInt(width,10) < parseInt(height,10)) ? 'portrait' : 'landscape'
       }
