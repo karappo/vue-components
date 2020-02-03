@@ -83,7 +83,9 @@
       "comma-spacing": ["error", {
         "before": false,
         "after": true
-      }]
+      }],
+      "quote-props": ["error", "as-needed"],
+      "object-curly-spacing": ["error", "always"]
     },
     "parserOptions": {
       "parser": "babel-eslint"
