@@ -78,7 +78,8 @@
       "arrow-spacing": ["error", {
         "before": true,
         "after": true
-      }]
+      }],
+      "quotes": ["error", "single"]
     },
     "parserOptions": {
       "parser": "babel-eslint"
