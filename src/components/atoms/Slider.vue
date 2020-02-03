@@ -160,13 +160,17 @@ export default Vue.extend({
   data: function () {
     return {
       activeIndex: 0,
-      slideCount: 0,
       timer: null,
       widthInPixels: '0px',
       heightInPixels: '0px',
       orientation: null,
       imageSizes: new Array(this.images.length),
       imageSizesCompleted: false
+    }
+  },
+  computed: {
+    slideCount: function () {
+      return this.images.length
     }
   },
   mounted: function () {
@@ -182,9 +186,6 @@ export default Vue.extend({
       }
       img.src = item
     })
-
-    const slides = this.$el.querySelectorAll('.slide')
-    this.slideCount = slides.length
 
     this.timer = setInterval(this.switchSlide, this.duration)
   },
