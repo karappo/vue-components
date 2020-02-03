@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "setup": "git submodule update --init && yarn",
+    "precommit": "npm run lint",
     "start": "yarn serve:storybook",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
