@@ -189,11 +189,11 @@ export default Vue.extend({
     imageStyle(item, index) {
       let backgroundSize = 'cover'
       let img = this.imageSizes[index]
-      if(img) {
+      if (img) {
         // offset分も加味して、必要なだけ引き伸ばしたとすると必要な幅高さが得られるかを調べる
 
         // 縦方向のトランジッション
-        if(['up', 'down'].includes(this.direction)) {
+        if (['up', 'down'].includes(this.direction)) {
           let calcWidth = img.width * ((this.$el.clientHeight + parseInt(this.offset,10)) / img.height)
           backgroundSize = calcWidth < this.$el.clientWidth ? '100% auto' : 'auto calc(100% + var(--offset))'
         }
@@ -219,13 +219,13 @@ export default Vue.extend({
     },
     switchSlide() {
       this.activeIndex++;
-      if(this.slideCount <= this.activeIndex) {
+      if (this.slideCount <= this.activeIndex) {
         this.activeIndex = 0
       }
     },
     // DOM順序を変えずにz-indexで表示を切り替えるため、一つ前の画像のz-indexも必要
     exActiveIndex() {
-      if(this.activeIndex == 0) {
+      if (this.activeIndex == 0) {
         return this.slideCount - 1
       }
       else {
@@ -233,7 +233,7 @@ export default Vue.extend({
       }
     },
     getOrientation(width, height) {
-      if(width && height) {
+      if (width && height) {
         return (parseInt(width,10) < parseInt(height,10)) ? 'portrait' : 'landscape'
       }
     }

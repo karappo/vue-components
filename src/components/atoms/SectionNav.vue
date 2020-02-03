@@ -89,10 +89,10 @@ export default Vue.extend({
     onScroll() {
       this.$el.querySelectorAll('a').forEach((el)=> { el.classList.remove('current')})
       // 後ろから順にチェックしていく
-      for(const i in this.targets) {
+      for (const i in this.targets) {
         const target = document.querySelector(this.targets[i])
         const targetTop = window.pageYOffset + target.getBoundingClientRect().top - document.querySelector('header').getBoundingClientRect().height
-        if(targetTop <= window.scrollY) {
+        if (targetTop <= window.scrollY) {
           this.$el.querySelector(`a[href='${this.targets[i]}']`).classList.add('current')
           break
         }

@@ -69,7 +69,12 @@
     "globals": {
       "ga": false
     },
-    "rules": {},
+    "rules": {
+      "keyword-spacing": [2, {
+        "before": true,
+        "after": true
+      }]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
