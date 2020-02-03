@@ -1,6 +1,6 @@
 <template lang="pug">
 .slides(:data-direction="direction" :data-orientation="orientation" :style="slidesStyle()")
-  .slide(v-for="(item, index) in images" :class="{ active: activeIndex==index, exActive: exActiveIndex()==index, moving: activeIndex==index || exActiveIndex()==index}")
+  .slide(v-for="(item, index) in images" :class="{ active: activeIndex === index, exActive: exActiveIndex() === index, moving: activeIndex === index || exActiveIndex() === index}")
     .image(:style="imageStyle(item, index)")
 </template>
 
