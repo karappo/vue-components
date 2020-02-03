@@ -64,7 +64,7 @@ export default Vue.extend({
   props: {
     links: {
       type: Array,
-      default: () => { reutrn [] }
+      default: () => { return [] }
     }
   },
   data: function() {
