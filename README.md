@@ -12,6 +12,8 @@ yarn setup
 
 ### Compiles and hot-reloads for development
 ```
+yarn start
+# or
 yarn serve:storybook
 ```
 
