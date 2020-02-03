@@ -119,7 +119,7 @@ export default Vue.extend({
   props: {
     images: {
       type: Array,
-      default: []
+      default: () => { return [] }
     },
     duration: {
       type: Number,
