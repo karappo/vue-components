@@ -183,12 +183,17 @@ export default Vue.extend({
     }
   },
   mounted: function () {
+    let rest = this.images.length
     this.images.forEach((item, index) => {
       let img = new Image();
       img.onload = () => {
         this.imageSizes[index] = {
           width: img.width,
           height: img.height
+        }
+        rest--
+        if (rest == 0) {
+          this.setImageBackgroundSize()
         }
       }
       img.src = item
@@ -211,15 +216,18 @@ export default Vue.extend({
       this.images.forEach((item, index) => {
         // offset分も加味して、必要なだけ引き伸ばしたとすると必要な幅高さが得られるかを調べる
         // 縦方向のトランジッション
-        const el = this.$refs[`image-${index}`][0]
-        if (['up', 'down'].includes(this.direction)) {
-          let calcWidth = item.width * ((this.$el.clientHeight + parseInt(this.offset, 10)) / item.height)
-          el.style.backgroundSize = calcWidth < this.$el.clientWidth ? '100% auto' : 'auto calc(100% + var(--offset))'
-        }
-        // 横方向のトランジッション
-        else {
-          let calcHeight = item.height * ((this.$el.clientWidth + parseInt(this.offset, 10)) / item.width)
-          el.style.backgroundSize = calcHeight < this.$el.clientHeight ? 'auto 100%' : 'calc(100% + var(--offset)) auto'
+        const imageSize = this.imageSizes[index]
+        if (imageSize) {
+          const el = this.$refs[`image-${index}`][0]
+          if (['up', 'down'].includes(this.direction)) {
+            let calcWidth = imageSize.width * ((this.$el.clientHeight + parseInt(this.offset, 10)) / imageSize.height)
+            el.style.backgroundSize = calcWidth < this.$el.clientWidth ? '100% auto' : 'auto calc(100% + var(--offset))'
+          }
+          // 横方向のトランジッション
+          else {
+            let calcHeight = imageSize.height * ((this.$el.clientWidth + parseInt(this.offset, 10)) / imageSize.width)
+            el.style.backgroundSize = calcHeight < this.$el.clientHeight ? 'auto 100%' : 'calc(100% + var(--offset)) auto'
+          }
         }
       })
     },
