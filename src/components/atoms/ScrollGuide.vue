@@ -83,7 +83,7 @@ export default Vue.extend({
     },
     textColor: {
       type: String,
-      default: '#000000',
+      default: 'black',
       validator: (value) => {
         if (!isValidColor(value)) throw new Error('The prop "textColor" should be valid color')
         return true
