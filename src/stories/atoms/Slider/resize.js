@@ -12,6 +12,7 @@ const component = () => {
     components: { Slider },
 
     template: `
+    <div style="position: relative; width: 100%; height: calc(100vh - 18px); border: 1px solid #eee;">
       <Slider
         :images="[
           '${img1}',
@@ -19,9 +20,10 @@ const component = () => {
           '${img3}'
         ]"
         width='100%'
-        height = '50vh'
+        height = '100%'
         offset='100px'
       />
+    </div>
     `
   }
 }
