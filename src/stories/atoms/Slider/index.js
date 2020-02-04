@@ -12,16 +12,16 @@ const component = () => {
     components: { Slider },
 
     template: `
-      <Slider
-        :images="[
-          '${img1}',
-          '${img2}',
-          '${img3}'
-        ]"
-        width='600px'
-        height='400px'
-        offset='100px'
-      />
+    <Slider
+      :images="[
+        '${img1}',
+        '${img2}',
+        '${img3}'
+      ]"
+      width='600px'
+      height='400px'
+      offset='100px'
+    />
     `
   }
 }
