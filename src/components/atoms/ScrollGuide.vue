@@ -50,19 +50,7 @@
 
 <script>
 import Vue from 'vue'
-const hexToRgb = (hex) => {
-  const res = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-  return res ? `rgb(${parseInt(res[1], 16)},${parseInt(res[2], 16)},${parseInt(res[3], 16)})` : null
-}
-const isValidColor = (color) => {
-  color = color.toLowerCase().replace(/\s/g, '') // normalize
-  // Create test elements and assign styles
-  const s = document.createElement('div').style
-  s.color = color
-  const computed = s.color.replace(/\s/g, '') // normalize
-  // First compare with "rgba()". If color is Hex, change to rgb and compare
-  return  computed == color || computed == hexToRgb(color)
-}
+import { isValidColor } from '@karappo-inc/util'
 export default Vue.extend({
   props: {
     gutterColor: {

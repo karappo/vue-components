@@ -946,6 +946,11 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@karappo-inc/util@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@karappo-inc/util/-/util-0.0.1.tgz#870d4cd0ede60a46391b6413657091e4db505aca"
+  integrity sha512-USyhlP/LSX1EyVXeA41l3lahoCRN3WgUp++ClETP3GHLqf/tFPAVnKMS+9Sl9/qRXjzwZ85rvA+3n6XTPXmQOQ==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
