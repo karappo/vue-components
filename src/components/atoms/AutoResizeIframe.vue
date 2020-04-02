@@ -25,8 +25,9 @@ export default Vue.extend({
   },
   mounted () {
     // 念の為読み込み時の幅と高さを覚えておく
-    this.width = this.initWidth = this.$el.getAttribute('width')
-    this.height = this.initHeight = this.$el.getAttribute('height')
+    this.initWidth = this.$el.getAttribute('width')
+    this.initHeight = this.$el.getAttribute('height')
+    this.onResize()
   },
   created () {
     window.addEventListener('resize', this.onResize);
