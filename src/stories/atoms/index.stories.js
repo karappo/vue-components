@@ -9,8 +9,8 @@ import SliderResize from './Slider/resize';
 import ScrollGuide from './ScrollGuide/';
 import ScrollGuideColor from './ScrollGuide/color';
 
-import EmbedVideoYoutube from './EmbedVideo/youtube';
-import EmbedVideoVimeo from './EmbedVideo/vimeo';
+import AutoResizeIframeYoutube from './AutoResizeIframe/youtube';
+import AutoResizeIframeVimeo from './AutoResizeIframe/vimeo';
 
 storiesOf('Atoms/Slider', module)
   .add('Basic', withReadme(...Slider))
@@ -21,6 +21,6 @@ storiesOf('Atoms/ScrollGuide', module)
   .add('Basic', withReadme(...ScrollGuide))
   .add('Color', withReadme(...ScrollGuideColor))
 
-storiesOf('Atoms/EmbedVideo', module)
-  .add('Youtube', withReadme(...EmbedVideoYoutube))
-  .add('Vimeo', withReadme(...EmbedVideoVimeo))
+storiesOf('Atoms/AutoResizeIframe', module)
+  .add('Youtube', withReadme(...AutoResizeIframeYoutube))
+  .add('Vimeo', withReadme(...AutoResizeIframeVimeo))
