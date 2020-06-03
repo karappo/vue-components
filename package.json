@@ -4,7 +4,7 @@
   "description": "Vue components by Karappo Inc.",
   "author": "Naokazu Terada",
   "license": "MIT",
-  "homepage": "https://github.com/karappo/npm-util#readme",
+  "homepage": "https://github.com/karappo/vue-components",
   "keywords": ["vue"],
   "main": "dist/vue-components.umd.js",
   "module": "dist/vue-components.esm.js",
