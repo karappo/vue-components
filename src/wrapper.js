@@ -1,11 +1,17 @@
 // Import vue component
-import SectionNav from '../components/atoms/SectionNav.vue';
+import AutoResizeIframe from './components/atoms/AutoResizeIframe.vue';
+import ScrollGuide from './components/atoms/ScrollGuide.vue';
+import SectionNav from './components/atoms/SectionNav.vue';
+import Slider from './components/atoms/Slider.vue';
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
+	Vue.component('AutoResizeIframe', AutoResizeIframe);
+	Vue.component('ScrollGuide', ScrollGuide);
 	Vue.component('SectionNav', SectionNav);
+	Vue.component('Slider', Slider);
 }
 
 // Create module definition for Vue.use()
@@ -25,4 +31,9 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default SectionNav;
+export {
+  AutoResizeIframe,
+  ScrollGuide,
+  SectionNav,
+  Slider
+};
