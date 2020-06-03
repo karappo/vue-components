@@ -23,8 +23,7 @@
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-components.min.js",
     "lint": "vue-cli-service lint",
     "build:storybook": "vue-cli-service storybook:build && node ./build-scripts/fix-static-storybook.js",
-    "serve:storybook": "vue-cli-service storybook:serve -p 6006",
-    "deploy": "npm publish --access=public ."
+    "serve:storybook": "vue-cli-service storybook:serve -p 6006"
   },
   "dependencies": {
     "@karappo-inc/util": "0.0.8",

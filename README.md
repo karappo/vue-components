@@ -44,3 +44,8 @@ yarn build:storybook
 ```
 yarn lint
 ```
+
+#### Publish to npm registory
+```
+npm publish --access=public .
+```
