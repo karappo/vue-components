@@ -10,7 +10,7 @@ Vue components by Karappo Inc.
 
 ```js
 import {
-  AutoResizeIframe,
+  AutosizeIframe,
   SectionNav,
   ScrollGuide,
   Slider

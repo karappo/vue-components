@@ -187,11 +187,11 @@ __vue_render__._withStripped = true;
   /* style */
   var __vue_inject_styles__ = function (inject) {
     if (!inject) { return }
-    inject("data-v-d0e48e9a_0", { source: "iframe[data-v-d0e48e9a] {\n  height: var(--height);\n}\n\n/*# sourceMappingURL=AutoResizeIframe.vue.map */", map: {"version":3,"sources":["/Users/terada/Sites/@karappo-inc/vue-components/src/components/atoms/AutoResizeIframe.vue","AutoResizeIframe.vue"],"names":[],"mappings":"AAKA;EACA,qBAAA;ACJA;;AAEA,+CAA+C","file":"AutoResizeIframe.vue","sourcesContent":["<template lang=\"pug\">\niframe(:style=\"style()\")\n</template>\n\n<style lang=\"sass\" scoped>\niframe\n  height: var(--height)\n</style>\n\n<script>\nimport Vue from 'vue'\n\nexport default Vue.extend({\n  props: {\n  },\n  data () {\n    return {\n      initWidth: null,\n      initHeight: null,\n      width: null,\n      height: null\n    }\n  },\n  computed: {\n  },\n  mounted () {\n    // 念の為読み込み時の幅と高さを覚えておく\n    this.initWidth = this.$el.getAttribute('width')\n    this.initHeight = this.$el.getAttribute('height')\n    this.onResize()\n  },\n  created () {\n    window.addEventListener('resize', this.onResize);\n  },\n  destroyed () {\n    window.removeEventListener('resize', this.onResize);\n  },\n  methods: {\n    onResize () {\n      if (this.width !== this.$el.clientWidth) {\n        this.width = this.$el.clientWidth\n        this.height = this.width * (this.initHeight / this.initWidth)\n      }\n    },\n    style () {\n      return {\n        '--height': `${this.height}px`\n      }\n    }\n  }\n})\n</script>\n","iframe {\n  height: var(--height);\n}\n\n/*# sourceMappingURL=AutoResizeIframe.vue.map */"]}, media: undefined });
+    inject("data-v-16c048b4_0", { source: "iframe[data-v-16c048b4] {\n  height: var(--height);\n}\n\n/*# sourceMappingURL=AutosizeIframe.vue.map */", map: {"version":3,"sources":["/Users/terada/Sites/@karappo-inc/vue-components/src/components/atoms/AutosizeIframe.vue","AutosizeIframe.vue"],"names":[],"mappings":"AAKA;EACA,qBAAA;ACJA;;AAEA,6CAA6C","file":"AutosizeIframe.vue","sourcesContent":["<template lang=\"pug\">\niframe(:style=\"style()\")\n</template>\n\n<style lang=\"sass\" scoped>\niframe\n  height: var(--height)\n</style>\n\n<script>\nimport Vue from 'vue'\n\nexport default Vue.extend({\n  props: {\n  },\n  data () {\n    return {\n      initWidth: null,\n      initHeight: null,\n      width: null,\n      height: null\n    }\n  },\n  computed: {\n  },\n  mounted () {\n    // 念の為読み込み時の幅と高さを覚えておく\n    this.initWidth = this.$el.getAttribute('width')\n    this.initHeight = this.$el.getAttribute('height')\n    this.onResize()\n  },\n  created () {\n    window.addEventListener('resize', this.onResize);\n  },\n  destroyed () {\n    window.removeEventListener('resize', this.onResize);\n  },\n  methods: {\n    onResize () {\n      if (this.width !== this.$el.clientWidth) {\n        this.width = this.$el.clientWidth\n        this.height = this.width * (this.initHeight / this.initWidth)\n      }\n    },\n    style () {\n      return {\n        '--height': `${this.height}px`\n      }\n    }\n  }\n})\n</script>\n","iframe {\n  height: var(--height);\n}\n\n/*# sourceMappingURL=AutosizeIframe.vue.map */"]}, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__ = "data-v-d0e48e9a";
+  var __vue_scope_id__ = "data-v-16c048b4";
   /* module identifier */
   var __vue_module_identifier__ = undefined;
   /* functional template */
@@ -648,7 +648,7 @@ __vue_render__$3._withStripped = true;
 function install(Vue) {
 	if (install.installed) { return; }
 	install.installed = true;
-	Vue.component('AutoResizeIframe', __vue_component__);
+	Vue.component('AutosizeIframe', __vue_component__);
 	Vue.component('ScrollGuide', __vue_component__$1);
 	Vue.component('SectionNav', __vue_component__$2);
 	Vue.component('Slider', __vue_component__$3);
@@ -670,4 +670,4 @@ if (GlobalVue) {
 	GlobalVue.use(plugin);
 }
 
-export { __vue_component__ as AutoResizeIframe, __vue_component__$1 as ScrollGuide, __vue_component__$2 as SectionNav, __vue_component__$3 as Slider, install };
+export { __vue_component__ as AutosizeIframe, __vue_component__$1 as ScrollGuide, __vue_component__$2 as SectionNav, __vue_component__$3 as Slider, install };

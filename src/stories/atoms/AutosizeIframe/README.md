@@ -4,7 +4,7 @@ YoutubeやVimeoの埋め込みiframe要素をリサイズに対応させたコ�
 
 ### 使い方
 
-埋め込み用のコードを取得し、iframeをAutoResizeIframeに置き換えるだけです。attributesはそのまま。
+埋め込み用のコードを取得し、iframeをAutosizeIframeに置き換えるだけです。attributesはそのまま。
 
 サンプルは、下記スタイルを当てた場合です。
 

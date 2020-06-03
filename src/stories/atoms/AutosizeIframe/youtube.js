@@ -1,18 +1,18 @@
 // /* eslint-disable import/no-extraneous-dependencies */
 
 import readme from './README.md';
-import AutoResizeIframe from '../../../components/atoms/AutoResizeIframe.vue';
+import AutosizeIframe from '../../../components/atoms/AutosizeIframe.vue';
 import './style.sass';
 
 const component = () => {
   return {
-    components: { AutoResizeIframe },
+    components: { AutosizeIframe },
     template: `
       <div>
         <h3>iframe</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/gPT7lg5n2Ws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h3>AutoResizeIframe</h3>
-        <AutoResizeIframe width="560" height="315" src="https://www.youtube.com/embed/gPT7lg5n2Ws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></AutoResizeIframe>
+        <h3>AutosizeIframe</h3>
+        <AutosizeIframe width="560" height="315" src="https://www.youtube.com/embed/gPT7lg5n2Ws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></AutosizeIframe>
       </div>
     `
   }
