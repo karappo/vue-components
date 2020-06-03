@@ -19,33 +19,35 @@ import {
 
 *[ Under construction ]*
 
-See our [storybook](https://karappo-vue-components.netlify.app/) to know ussage.
+See our [storybook](https://karappo-vue-components.netlify.app/) to know usage.
 
 ## For developers
 
 ### Project setup
-```
+```sh
 yarn setup
 ```
 
 #### Compiles and hot-reloads for development
-```
+```sh
 yarn start
-# or
+```
+or
+```sh
 yarn serve:storybook
 ```
 
 #### Compiles and minifies for production
-```
+```sh
 yarn build:storybook
 ```
 
 #### Lints and fixes files
-```
+```sh
 yarn lint
 ```
 
 #### Publish to npm registory
-```
+```sh
 npm publish --access=public .
 ```
