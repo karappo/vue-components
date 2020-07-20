@@ -1,6 +1,6 @@
 <template lang="pug">
 .scroll(:style="styles")
-  span SCROLL
+  span {{ text }}
   i
 </template>
 
@@ -68,6 +68,10 @@ export default Vue.extend({
         if (!isValidColor(value)) throw new Error('The prop "highlightColor" should be valid color')
         return true
       }
+    },
+    text: {
+      type: String,
+      default: 'SCROLL'
     },
     textColor: {
       type: String,

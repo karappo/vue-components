@@ -7,6 +7,7 @@ import SliderDirection from './Slider/direction';
 import SliderResize from './Slider/resize';
 
 import ScrollGuide from './ScrollGuide/';
+import ScrollGuideText from './ScrollGuide/text';
 import ScrollGuideColor from './ScrollGuide/color';
 
 import AutosizeIframeYoutube from './AutosizeIframe/youtube';
@@ -19,6 +20,7 @@ storiesOf('Atoms/Slider', module)
 
 storiesOf('Atoms/ScrollGuide', module)
   .add('Basic', withReadme(...ScrollGuide))
+  .add('Text', withReadme(...ScrollGuideText))
   .add('Color', withReadme(...ScrollGuideColor))
 
 storiesOf('Atoms/AutosizeIframe', module)
