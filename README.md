@@ -52,5 +52,6 @@ yarn lint
 
 #### Publish to npm registory
 ```sh
+npm login
 npm publish --access=public .
 ```
