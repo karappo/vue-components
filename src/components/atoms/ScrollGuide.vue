@@ -1,6 +1,6 @@
 <template lang="pug">
 .root
-  .scroll(:style="styles")
+  .scroll(:style="styles" @click="click")
     span {{ text }}
     i
 </template>
@@ -29,6 +29,7 @@
   flex-direction: column
   margin: 0 auto
   padding: 20px 20px 0 20px
+  cursor: pointer
   span
     font-size: 12px
     letter-spacing: 0.05em
@@ -94,6 +95,11 @@ export default Vue.extend({
         '--highlight-color': this.highlightColor,
         '--text-color': this.textColor
       }
+    }
+  },
+  methods: {
+    click(e) {
+      this.$emit('click', e)
     }
   }
 })
