@@ -1,6 +1,6 @@
 {
   "name": "@karappo-inc/vue-components",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Vue components by Karappo Inc.",
   "author": "Naokazu Terada",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "serve:storybook": "vue-cli-service storybook:serve -p 6006"
   },
   "dependencies": {
-    "@karappo-inc/util": "0.0.11",
+    "@karappo-inc/util": "0.0.12",
     "object-inspect": "^1.6.0",
     "vue": "^2.6.10",
     "vue-resize-directive": "^1.2.0",
