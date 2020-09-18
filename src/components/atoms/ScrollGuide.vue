@@ -1,7 +1,8 @@
 <template lang="pug">
-.scroll(:style="styles")
-  span {{ text }}
-  i
+.root
+  .scroll(:style="styles")
+    span {{ text }}
+    i
 </template>
 
 <style lang="sass" scoped>
@@ -15,15 +16,18 @@
   100%
     transform: translate3d(0, 100%, 0)
 
+.root
+  width: 100%
+  bottom: 0
+  position: absolute
+  display: flex
 .scroll
+  width: auto
   display: flex
   justify-content: center
   align-items: center
   flex-direction: column
-  position: absolute
-  width: 60px
-  bottom: 0
-  left: calc(50% - 30px)
+  margin: 0 auto
   span
     font-size: 12px
     letter-spacing: 0.05em
