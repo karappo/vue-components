@@ -962,10 +962,10 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
-"@karappo-inc/util@0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@karappo-inc/util/-/util-0.0.8.tgz#f81ba260d3de2c867240ddb7a8edf975e374f09f"
-  integrity sha512-dx+m/KXd0OZVAGvLy160TGFQkJUbmQx3WJFGbvO3V53b884VwQ5forOx+rlRfc5BNj5eTXZ2Es+qZ9mo1H7G/w==
+"@karappo-inc/util@0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@karappo-inc/util/-/util-0.0.10.tgz#ab58c479ce5ea5e54160f4d52642eee1b631f55e"
+  integrity sha512-NSxbixFRH9PFJeucs4TPCtDfYFrZ/abYCnc5IfSSHtpH3ngjiw8D1nFsxL5+umdO4CCQjKYWdTVihFLwhZiG1Q==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
