@@ -28,6 +28,7 @@
   align-items: center
   flex-direction: column
   margin: 0 auto
+  padding: 20px 20px 0 20px
   span
     font-size: 12px
     letter-spacing: 0.05em
