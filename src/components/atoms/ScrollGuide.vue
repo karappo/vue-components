@@ -1,12 +1,12 @@
 <template lang="pug">
-.root
-  .scroll(:style="styles" @click="click")
+.scroll_guide_wrap
+  .scroll_guide(:style="styles" @click="click")
     span {{ text }}
     i
 </template>
 
 <style lang="sass" scoped>
-@keyframes scroll
+@keyframes scroll_guide_animation
   0%
     transform: translate3d(0, -100%, 0)
   15%
@@ -16,12 +16,12 @@
   100%
     transform: translate3d(0, 100%, 0)
 
-.root
+.scroll_guide_wrap
   width: 100%
   bottom: 0
   position: absolute
   display: flex
-.scroll
+.scroll_guide
   width: auto
   display: flex
   justify-content: center
@@ -51,7 +51,7 @@
       position: absolute
       top: 0
       left: 0
-      animation: scroll 2s infinite normal
+      animation: scroll_guide_animation 2s infinite normal
 </style>
 
 <script>
