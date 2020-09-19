@@ -53,5 +53,5 @@ yarn lint
 #### Publish to npm registory
 ```sh
 npm login
-yarn publish
+yarn npm-publish
 ```
