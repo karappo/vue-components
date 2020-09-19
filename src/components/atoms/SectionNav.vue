@@ -1,5 +1,5 @@
 <template lang="pug">
-.section-nav
+.section_nav
   .tooltip(v-if="tooltipY" :style="{top: tooltipY}")
     svg(width="8" height="9" viewBox="0 0 8 9")
       path(data-name="多角形" d="M4.5,0,9,8H0Z" transform="translate(8) rotate(90)")
@@ -10,7 +10,7 @@
 </template>
 
 <style lang="sass" scoped>
-.section-nav
+.section_nav
   z-index: 100
   position: fixed
   top: 0
