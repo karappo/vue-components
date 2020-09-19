@@ -1,6 +1,6 @@
 {
   "name": "@karappo-inc/vue-components",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Vue components by Karappo Inc.",
   "author": "Naokazu Terada",
   "license": "MIT",
@@ -25,10 +25,11 @@
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-components.min.js",
     "lint": "vue-cli-service lint",
     "build:storybook": "vue-cli-service storybook:build && node ./build-scripts/fix-static-storybook.js",
-    "serve:storybook": "vue-cli-service storybook:serve -p 6006"
+    "serve:storybook": "vue-cli-service storybook:serve -p 6006",
+    "publish": "npm publish --access=public ."
   },
   "dependencies": {
-    "@karappo-inc/util": "0.0.10",
+    "@karappo-inc/util": "0.0.18",
     "object-inspect": "^1.6.0",
     "vue": "^2.6.10",
     "vue-resize-directive": "^1.2.0",
