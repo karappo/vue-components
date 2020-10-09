@@ -26,6 +26,13 @@ See our [storybook](https://karappo-vue-components.netlify.app/) to know usage.
 
 ## For developers
 
+### Notice
+
+Don't use these syntax for IE11
+
+- `for in` or `for of`
+- Default arguments
+
 ### Project setup
 ```sh
 yarn setup
