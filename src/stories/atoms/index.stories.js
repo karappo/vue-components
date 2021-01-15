@@ -15,6 +15,8 @@ import AutosizeIframeVimeo from './AutosizeIframe/vimeo';
 
 import ExternalLink from './ExternalLink/';
 
+import MailLink from './MailLink/';
+
 storiesOf('Atoms/Slider', module)
   .add('Basic', withReadme(...Slider))
   .add('Direction', withReadme(...SliderDirection))
@@ -31,3 +33,6 @@ storiesOf('Atoms/AutosizeIframe', module)
 
 storiesOf('Atoms/ExternalLink', module)
   .add('Basic', withReadme(...ExternalLink))
+
+storiesOf('Atoms/MailLink', module)
+  .add('Basic', withReadme(...MailLink))
