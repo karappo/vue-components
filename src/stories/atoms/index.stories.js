@@ -12,6 +12,7 @@ import AutosizeIframeYoutube from './AutosizeIframe/youtube';
 import AutosizeIframeVimeo from './AutosizeIframe/vimeo';
 import ExternalLink from './ExternalLink/';
 import MailLink from './MailLink/';
+import Paragraphs from './Paragraphs/';
 
 storiesOf('Atoms/Slider', module)
   .add('Basic', withReadme(...Slider))
@@ -32,3 +33,6 @@ storiesOf('Atoms/ExternalLink', module)
 
 storiesOf('Atoms/MailLink', module)
   .add('Basic', withReadme(...MailLink))
+
+storiesOf('Atoms/Paragraphs', module)
+  .add('Basic', withReadme(...Paragraphs))
