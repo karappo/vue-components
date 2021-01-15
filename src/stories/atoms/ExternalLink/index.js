@@ -8,7 +8,7 @@ const component = () => {
   return {
     components: { ExternalLink },
     template: `
-      <div style="position: relative; width: 100%; height: calc(100vh - 18px); border: 1px solid #eee;">
+      <div>
         <ExternalLink href="https://karappo.net">This is external link</ExternalLink>
       </div>
       `
