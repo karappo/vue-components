@@ -11,6 +11,7 @@ import ScrollGuideColor from './ScrollGuide/color';
 import AutosizeIframeYoutube from './AutosizeIframe/youtube';
 import AutosizeIframeVimeo from './AutosizeIframe/vimeo';
 import ExternalLink from './ExternalLink/';
+// import Img2X from './Img2X/'; // TODO
 import MailLink from './MailLink/';
 import Paragraphs from './Paragraphs/';
 
@@ -30,6 +31,10 @@ storiesOf('Atoms/AutosizeIframe', module)
 
 storiesOf('Atoms/ExternalLink', module)
   .add('Basic', withReadme(...ExternalLink))
+
+// TODO
+// storiesOf('Atoms/Img2X', module)
+//   .add('Basic', withReadme(...Img2X))
 
 storiesOf('Atoms/MailLink', module)
   .add('Basic', withReadme(...MailLink))
