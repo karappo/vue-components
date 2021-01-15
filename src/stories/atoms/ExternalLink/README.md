@@ -1,0 +1,3 @@
+# ExternalLink
+
+`target="_blank" rel="noopener noreferrer"`を省略したいためだけ…

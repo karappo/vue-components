@@ -13,6 +13,8 @@ import ScrollGuideColor from './ScrollGuide/color';
 import AutosizeIframeYoutube from './AutosizeIframe/youtube';
 import AutosizeIframeVimeo from './AutosizeIframe/vimeo';
 
+import ExternalLink from './ExternalLink/';
+
 storiesOf('Atoms/Slider', module)
   .add('Basic', withReadme(...Slider))
   .add('Direction', withReadme(...SliderDirection))
@@ -26,3 +28,6 @@ storiesOf('Atoms/ScrollGuide', module)
 storiesOf('Atoms/AutosizeIframe', module)
   .add('Youtube', withReadme(...AutosizeIframeYoutube))
   .add('Vimeo', withReadme(...AutosizeIframeVimeo))
+
+storiesOf('Atoms/ExternalLink', module)
+  .add('Basic', withReadme(...ExternalLink))
