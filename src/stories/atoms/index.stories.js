@@ -5,16 +5,12 @@ import { withReadme } from 'storybook-readme';
 import Slider from './Slider/';
 import SliderDirection from './Slider/direction';
 import SliderResize from './Slider/resize';
-
 import ScrollGuide from './ScrollGuide/';
 import ScrollGuideText from './ScrollGuide/text';
 import ScrollGuideColor from './ScrollGuide/color';
-
 import AutosizeIframeYoutube from './AutosizeIframe/youtube';
 import AutosizeIframeVimeo from './AutosizeIframe/vimeo';
-
 import ExternalLink from './ExternalLink/';
-
 import MailLink from './MailLink/';
 
 storiesOf('Atoms/Slider', module)
