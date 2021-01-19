@@ -15,6 +15,10 @@ npm install @karappo-inc/vue-components
 ```js
 import {
   AutosizeIframe,
+  ExternalLink,
+  Img2X,
+  MailLink,
+  Paragraphs,
   SectionNav,
   ScrollGuide,
   Slider
